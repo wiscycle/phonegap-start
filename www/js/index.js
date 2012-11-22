@@ -44,18 +44,17 @@ var app = {
 
 
 function captureBarcode(){
-    window.plugins.barcodeScanner.scan( processBarcode(result), function(error) {
+    window.plugins.barcodeScanner.scan( function(result) {
+            alert("We got a barcode\n" +
+                      "Result: " + result.text + "\n" +
+                      "Format: " + result.format + "\n" +
+                      "Cancelled: " + result.cancelled);
+        }, function(error) {
             alert("Scanning failed: " + error);
         }
     );
 }
 
-function processBarcode(result){
-    alert("We got a barcode\n" +
-                  "Result: " + result.text + "\n" +
-                  "Format: " + result.format + "\n" +
-                  "Cancelled: " + result.cancelled);
-}
 
 
 
