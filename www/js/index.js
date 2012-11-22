@@ -49,7 +49,8 @@ function capturePhoto(){
 function uploadPhoto(data){
 // this is where you would send the image file to server
 //output image to screen
-    cameraPic.src = "data:image/jpeg;base64," + data;
+    //cameraPic.src = "data:image/jpeg;base64," + data;
+    cameraPic.src = data;
 }
 
 
